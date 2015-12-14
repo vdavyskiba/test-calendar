@@ -1,0 +1,18 @@
+<form>
+    <div class="right">
+        <button type="submit" ng-click="item.state='view';">ok</button>
+        <button ng-click="remove(item)">delete</button>
+
+    </div>
+    <div>
+        <label>event:</label>
+        <input type="text" ng-model="item.model.name">
+    </div>
+    <div>
+        <label>start at:</label>
+        <input type="date" ng-model="item.model.start">
+        <input type="time" ng-model="item.model.start">
+        <label>-</label>
+        <input type="time" ng-model="item.model.end">
+    </div>
+</form>

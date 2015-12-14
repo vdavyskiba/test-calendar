@@ -1,0 +1,26 @@
+
+<div class="event-list">
+
+    <button ng-click="add()" ng-disabled="model.newItems.length">create</button>
+
+    <div class="event-list-area">
+
+        <div class="event-list-item"
+             ng-repeat="item in model.newItems">
+
+            <div ng-include="'scripts/controllers/main/views/event-list/event-' + item.state + '.html'"></div>
+
+        </div>
+
+        <div class="event-list-item"
+             ng-repeat="item in model.list | orderBy: 'model.start'">
+
+            <div ng-include="'scripts/controllers/main/views/event-list/event-' + item.state + '.html'"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<timetable data="model.list"></timetable>

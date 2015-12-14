@@ -1,0 +1,96 @@
+body {
+    font: 16px/1.5 Helvetica, Arial, sans-serif;
+}
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.event-list {
+    max-width: 600px;
+    margin: auto;
+}
+
+.event-list label {
+    color: grey;
+    font-size: 0.8em;
+}
+
+.event-list button{
+    min-width: 50px;
+}
+.event-list-area {
+    height: 180px;
+    overflow-y: auto;
+}
+
+.event-list-item {
+    border-bottom: 1px dotted #000;
+    padding: 5px;
+}
+
+.event-list-item:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.timetable {
+    position: relative;
+}
+
+.timetable .hours-grid{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 50px;
+    color: grey;
+    font-size: 0.8em;
+    line-height: 27px;
+    text-align: right;
+}
+.timetable .hours-grid .hours-row {
+    border-bottom: 1px dotted #ccc;
+}
+.timetable .hours-grid .hours-row:last-child{
+    border-bottom-color: transparent;
+}
+.timetable .hours-grid .hours-cell {
+    display: block;
+    width: 40px;
+}
+.timetable-grid {
+    border: 1px solid grey;
+    height: 672px; /*handy value: 30min == 14px*/
+    margin: 10px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timetable-item {
+    box-sizing: border-box;
+    position: absolute;
+    left: 1px;
+    right: 1px;
+
+    background: rgba(21,135,189,0.05);
+    border: 1px solid #7ea7bd;;
+    padding: 1px 15px;
+    font-size: 0.75em;
+    line-height: 10px;
+    min-height: 12px;
+}
+.timetable-item.warning{
+    border-color: red;
+    background: rgba(233,90,78,0.25);
+}
+
+.ui-resizable-s {
+    border-top: 3px double;
+    width: 10px;
+    left: 50%;
+    margin-left: 5px;
+}

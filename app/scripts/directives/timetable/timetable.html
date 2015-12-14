@@ -1,0 +1,32 @@
+
+<div class="timetable">
+
+    <div class="hours-grid">
+
+        <div class="hours-row"
+             ng-repeat="item in hoursList track by $index">
+
+            <span class="hours-cell"
+                  ng-bind="$index + ':00'">
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="timetable-grid">
+
+        <div class="timetable-item"
+             ng-repeat="item in data | orderBy: 'model.start'"
+             ng-style="calcOffset(item)">
+
+            <span ng-bind="item.model.start | date : 'HH:mm'"></span>
+            <label>-</label>
+            <span ng-bind="item.model.end | date : 'HH:mm'"></span>
+            <strong ng-bind="item.model.name"></strong>
+
+        </div>
+
+    </div>
+
+</div>

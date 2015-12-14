@@ -1,0 +1,13 @@
+<div class="right">
+    <button ng-click="item.state='edit'">edit</button>
+</div>
+<div>
+    <label>event:</label>
+    <strong ng-bind="item.model.name"></strong>
+</div>
+<div>
+    <label>start at:</label>
+    <span ng-bind="item.model.start | date : 'dd.MM.yyyy HH:mm'"></span>
+    <label>-</label>
+    <span ng-bind="item.model.end | date : 'HH:mm'"></span>
+</div>
